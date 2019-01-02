@@ -1,0 +1,19 @@
+version: "2"
+services:
+ laravelpoc:
+   #build : docker-compose
+   image: server.router7f6750.com:5000/spark
+   container_name: laravelpoc
+   restart: always
+   volumes:
+    - .:/var/www/
+    - /var/log/nginx/laravelpoc:/var/log/nginx/
+   networks:
+      laravelpoc:
+        ipv4_address:  87.87.87.87
+networks:
+ laravelpoc:
+   driver: bridge
+   ipam:
+    config:
+      - subnet: 87.87.87.0/24 
