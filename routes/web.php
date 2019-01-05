@@ -10,56 +10,61 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
+Route::get('/', 'PagesController@home');
 
-Route::get('/', function () {
-    // $tasks = [
-    //     'Go to the store',
-    //     'Go to the market',
-    //     'Go to work',
-    // ];
+Route::get('/contact', 'PagesController@contact');
 
-    // return view(
-    //     'welcome',
-    //     ['tasks' => $tasks,
-    //     'foo' => request('title'),
-    //     'test' => '<script>alert("Hello");</script>', ]
-    // );
+Route::get('/about', 'PagesController@about');
 
-    //First alternative for above code
-    // $tasks = [
-    //     'Go to the store',
-    //     'Go to the market',
-    //     'Go to work',
-    // ];
+// Route::get('/', function () {
+//     $tasks = [
+//         'Go to the store',
+//         'Go to the market',
+//         'Go to work',
+//     ];
 
-    // $foo = 'Foobar';
+//     return view(
+//         'welcome',
+//         ['tasks' => $tasks,
+//         'foo' => request('title'),
+//         'test' => '<script>alert("Hello");</script>', ]
+//     );
 
-    // return view('welcome')->withTasks($tasks)->withFoo($foo);
+//     //First alternative for above code
+//     $tasks = [
+//         'Go to the store',
+//         'Go to the market',
+//         'Go to work',
+//     ];
 
-    //Second alternative for above code
+//     $foo = 'Foobar';
 
-    // return view('welcome')->withTasks([
-    //     'Go to the store',
-    //     'Go to the market',
-    //     'Go to work',
-    // ])->withFoo('Foobar');
+//     return view('welcome')->withTasks($tasks)->withFoo($foo);
 
-    //Third alternative for above code
+//     //Second alternative for above code
 
-    return view('welcome')->with([
-       'foo' => 'Foobar',
-       'tasks' => [
-        'Go to the store',
-        'Go to the market',
-        'Go to work',
-       ],
-    ]);
-});
+//     return view('welcome')->withTasks([
+//         'Go to the store',
+//         'Go to the market',
+//         'Go to work',
+//     ])->withFoo('Foobar');
 
-Route::get('contact', function () {
-    return view('contact');
-});
+//     //Third alternative for above code
 
-Route::get('about', function () {
-    return view('about');
-});
+//     return view('welcome')->with([
+//        'foo' => 'Foobar',
+//        'tasks' => [
+//         'Go to the store',
+//         'Go to the market',
+//         'Go to work',
+//        ],
+//     ]);
+// });
+
+// Route::get('contact', function () {
+//     return view('contact');
+// });
+
+// Route::get('about', function () {
+//     return view('about');
+// });
